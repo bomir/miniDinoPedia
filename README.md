@@ -1,4 +1,4 @@
 # miniDinoPedia
-Little DinoPedia to learn basic information and play with dinosaurs
+Mini DinoPedia to learn basic informations and play with dinosaurs
 
 App using ionic framework
