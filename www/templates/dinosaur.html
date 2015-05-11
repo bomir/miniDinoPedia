@@ -1,0 +1,59 @@
+<ion-view>
+	<ion-nav-title>{{dinosaur.name}}</ion-nav-title>
+    <ion-content class="has-header card-bg">
+	<ion-list>
+			<ion-item>
+				<div class="item">
+					<!--<p>{{dinosaur.category}}</p>-->
+					<div class="row" style="padding:0px">
+						<!--<div class="col" style="padding:0px">{{dinosaur.name}} <span style="opacity: 0.7;">({{dinosaur.meaning}})</span></div>-->
+						<div class="col" style="padding:0px">
+							<div class="row" style="padding:0px">
+								<div class="col" style="padding:0px"><i class="icon ion-ios7-paw"></i><span style="opacity: 0.7;"> {{dinosaur.theorder}}</span></div>
+							</div>
+							<div class="row" style="padding-top:10px">
+								<div class="col" style="padding:0px"><span style="opacity: 0.7;"> {{dinosaur.meaning}}</span></div>
+							</div>
+						</div>
+						<div class="col" style="padding-left:80px"><img src="pics/{{dinosaur.name}}.gif"></div>
+					</div>
+					
+				</div>
+				<div class="item item-body">
+					<div>
+						<img src="pics/{{dinosaur.name}}.jpg" style="max-width:100%;height:auto">						
+					</div>
+				</div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					<spam class="tab-item" >
+						<i class="icon ion-clock"></i>
+						{{dinosaur.era}}
+					</spam>
+					<spam class="tab-item" >
+						<i class="icon ion-android-earth"></i>
+						{{dinosaur.site}}
+					</spam>	
+					<spam class="tab-item" >
+						<i class="icon ion-fork"></i>
+						{{dinosaur.diet}}
+					</spam>	
+				</div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					<spam class="tab-item" >
+						<i class="icon ion-arrow-up-c"></i>
+						{{dinosaur.height}} m
+					</spam>
+					<spam class="tab-item" >
+						<i class="icon ion-arrow-right-c"></i>
+						{{dinosaur.length}} m
+					</spam>	
+					<spam class="tab-item" >
+						<i class="icon ion-egg"></i>
+						{{dinosaur.weight}} kg
+					</spam>			
+				</div>				 
+			</ion-item>		
+		<ion-list>
+    </ion-content>
+</ion-view>
+

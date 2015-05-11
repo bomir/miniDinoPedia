@@ -1,0 +1,24 @@
+<ion-view title="Dinosaurs">
+
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper" id="search-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <!--<input id="searchKey" type="search" placeholder="Search" autocorrect="off" ng-model="searchKey" ng-change="search()">-->
+			<input id="searchKey" type="text" placeholder="what are you looking for?" ng-model="search.$">
+        </label>
+        <button class="button button-clear icon ion-close-round" ng-click="clearSearch()"></button>
+    </div>
+
+     <ion-content class="has-header has-subheader">
+        <ion-list>
+            <ion-item ng-repeat="dinosaur in dinosaurs | filter:search" >
+				<a class="item item-thumbnail-left" href="#/app/dinosaurs/{{dinosaur.id}}">
+				<img ng-src="pics/{{dinosaur.name}}.jpg">
+                <h3>{{dinosaur.name}}</h3>
+                <p>{{dinosaur.category}}</p>
+				</a>
+            </ion-item>
+        <ion-list>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,57 @@
+<ion-view view-title="Periodo">
+    <ion-nav-buttons side="right">
+      <button menu-toggle="right" class="button button-icon icon ion-ios7-refresh-outline" ng-click="playeraAgain()"></button>
+  </ion-nav-buttons>
+	<ion-content class="has-header">
+		<h3 style="padding:10px">Io sono del periodo...</h3>
+		<div class="row">
+			<div class="col col-65">
+				<div ng-drop="true" ng-drop-success="onDropComplete3($data,$event)" class="bar bar-period bar-cream" ng-click="onPeriodClick3(selectedDinosaur)">
+				  <span class="title">Cretaceo</span>
+				  <div ng-repeat="obj in droppedObjects3" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess3($data,$event)" ng-center-anchor="{{centerAnchor}}">
+					  <img ng-src="pics/{{obj.name}}.jpg" style="width:50px;hight:auto"/>
+				  </div>
+				</div>
+				<div ng-drop="true" ng-drop-success="onDropComplete2($data,$event)" class="bar bar-period bar-lemon" ng-click="onPeriodClick2(selectedDinosaur)">
+				  <span class="title">Giurassico</span>
+				  <div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)" ng-center-anchor="{{centerAnchor}}">
+					  <img ng-src="pics/{{obj.name}}.jpg" style="width:50px;hight:auto"/>
+				  </div>
+				</div>
+				<div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)" class="bar bar-period bar-cornsilk" ng-click="onPeriodClick1(selectedDinosaur)">
+				  <span class="title">Triassico</span>
+				  <div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}">
+					  <img ng-src="pics/{{obj.name}}.jpg" style="width:50px;hight:auto"/>
+				  </div>
+				</div>
+			</div>
+			<div class="col">		
+				<ul class="draggable-objects">
+					<li  ng-repeat="obj in draggableObjects" >
+						<div class="row">	
+							<div class="col">	
+								<div ng-drag="true" ng-drag-data="obj"><img ng-src="pics/{{ obj.name}}.jpg" style="width:50px;hight:auto"/><div><span style="opacity: 0.7;">{{obj.name}}</span></div> </div>
+							</div>	
+							<!--
+							<div class="col">	
+								<span ng-if="showResult"><div>Periodo: {{obj.era}}</div></span>
+							</div>	
+							-->	
+						</div>	
+					</li>
+				</ul>
+				<span ng-if="showResult">
+					<div class="bar bar-balanced" style="position:relative" ng-if="result" class="animate-if">
+						<div class="h1 title">Corretto!</div>
+					</div>
+					<div class="bar bar-assertive" style="position:relative" ng-if="!result" class="animate-if">
+						<div class="h1 title">Sbagliato!</div>
+					</div>
+				</span>
+			</div>			
+		</div>	 
+	</ion-content>
+</ion-view>	 
+	 
+
+
